@@ -1,0 +1,20 @@
+# Quick 'cd' into /work/projects
+export CDPATH='.:/work/projects'
+
+# (needs curl) Send me an SMS with the arguments
+function sms() {
+    curl "https://smsapi.free-mobile.fr/sendmsg?user=23769933&pass=HFlZBoevmvnoDc&msg=$@"
+}
+
+# Add the branch to the prompt when we are in a git project
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# (needs xclip) Use this to set clipboard from commandline, for example: 
+#   - cat file | copy
+#   - paste > file
+alias copy="xclip -selection c"
+alias paste="xclip -selection c -o"
+
