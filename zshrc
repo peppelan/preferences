@@ -106,4 +106,4 @@ export JIRA_URL="https://jira.iontrading.com"
 export JIRA_NAME="giuseppe.landolfi"
 
 # ...without forgetting a bit of fun
-fortune riddles | cowsay -f turtle | lolcat
+fortune mandela
