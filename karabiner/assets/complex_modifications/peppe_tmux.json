@@ -1,0 +1,36 @@
+{
+  "title": "Peppe's tmux",
+  "rules": [
+    {
+      "description": "Map right shift to Ctrl+B",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift"
+          },
+          "to_if_alone": [
+            {
+              "key_code": "b",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^co\\.zeit\\.hyperterm$",
+                "^co\\.zeit\\.hyper$",
+                "^io\\.alacritty$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
