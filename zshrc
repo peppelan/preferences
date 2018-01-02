@@ -105,5 +105,6 @@ fi
 export JIRA_URL="https://jira.iontrading.com"
 export JIRA_NAME="giuseppe.landolfi"
 
-# ...without forgetting a bit of fun
-fortune mandela
+# GO paths
+export GOPATH=~/projects/go
+export GOROOT=/usr/local/go
