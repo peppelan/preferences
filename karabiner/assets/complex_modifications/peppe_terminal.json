@@ -1,5 +1,5 @@
 {
-  "title": "Peppe's tmux",
+  "title": "Peppe's terminal rules",
   "rules": [
     {
       "description": "Map right shift to Ctrl+B",
